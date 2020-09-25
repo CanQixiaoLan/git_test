@@ -5,3 +5,13 @@ ssh-keygen -t rsa -C "2922qq.com"
 cat ~/wxn078/.ssh/id_rsa.pub
 # copy message except email to github ssh key
 ssh -T git@github.com
+git config credential.helper store   # stop to input username and password
+
+mkdir dir
+git init
+git remote add origin https://github.com/CanQixiaoLan/git_test.git
+vim xx.txt
+git add
+git commit -m "xxxx"
+git push -u origin master
+git push -u origin +master    # must
