@@ -1,0 +1,7 @@
+git config --global user.name "CanQixiaoLan"
+git config --global user.email "2922@qq.com"
+ssh-keygen -t rsa -C "2922qq.com"
+# 3 enter
+cat ~/wxn078/.ssh/id_rsa.pub
+# copy message except email to github ssh key
+ssh -T git@github.com
