@@ -1,10 +1,17 @@
 git config --global user.name "CanQixiaoLan"
 git config --global user.email "2922@qq.com"
+
+# 通过username和email生成密钥
 ssh-keygen -t rsa -C "2922qq.com"
 # 3 enter
+
 cat ~/wxn078/.ssh/id_rsa.pub
 # copy message except email to github ssh key
+
+# 测试ssh密钥是否可用
 ssh -T git@github.com
+
+# push 不需要username 和密码
 git config credential.helper store   # stop to input username and password
 
 mkdir dir
@@ -14,4 +21,21 @@ vim xx.txt
 git add
 git commit -m "xxxx"
 git push -u origin master
+
+#强制更新
 git push -u origin +master    # must
+git checkout
+git reset
+
+#回退版本
+git status
+
+# 查看工作区和版本区最新版本的不同
+git diff HEAD --git_test.txt
+
+# 未add,未commit,撤销工作区修改
+git checkout --git_test.txt
+
+# add但是没有commit，撤销修改
+git reset HEAD git_test.txt
+git checkout --git test.txt
