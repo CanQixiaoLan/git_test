@@ -1,0 +1,22 @@
+官网下载sh安装包
+bash xxx.sh
+一路enter，yes
+source ~/.bashrc
+
+
+# 更换源，很快
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+# conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/linux-64/
+conda config --set show_channel_urls yes
+
+conda create -n mmdetection python=3.7 -y
+
+
+# 离线安装pytorch,torchvision
+# 版本要符合系统cuda，cudatoolkit
+https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/linux-64/
+在上面网址下载
+conda install --offline xxx.tar.gz
+conda install xxx.tar.gz
