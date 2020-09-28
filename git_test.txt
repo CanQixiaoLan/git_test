@@ -14,6 +14,11 @@ ssh -T git@github.com
 # push 不需要username 和密码
 git config credential.helper store   # stop to input username and password
 
+要在github上先创建一个repo，并且不要有readme等文件
+否则得git pull origin master --allow-unrelated-histories
+
+直接上传文件夹时，只需init remote add commit push
+
 mkdir dir
 git init
 git remote add origin https://github.com/CanQixiaoLan/git_test.git
