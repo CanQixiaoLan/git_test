@@ -44,3 +44,8 @@ git checkout --git_test.txt
 # add但是没有commit，撤销修改
 git reset HEAD git_test.txt
 git checkout --git test.txt
+
+
+
+由于上传文件比较大且缓存比较小，改变缓存参数
+git config --global http.postBuffer 1048576000
