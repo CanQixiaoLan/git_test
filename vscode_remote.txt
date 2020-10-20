@@ -1,0 +1,11 @@
+vscode安装插件Remote Development
+
+win7 安装ssh （安装git就包含，简单好用，但git还是linux）
+
+git bash中ssh-keygen -t rsa生成id_rsa和id_rsa.pub
+
+id_rsa.pub 添加到服务器/home/.ssh/            # 不要和原有的重名
+
+cat id_rsa.pub >> authorized.keys	#重定向到这个文件中
+
+vscode ctrl+shift+p 打开remote setting, 在config中添加服务器ip地址+用户名+port，path：git下ssh.exe的存放地址，/git/user/bin/ssh.exe, platform:linux
